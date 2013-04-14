@@ -1,0 +1,13 @@
+{
+  "name": "Fuzzy Tab Accessor",
+  "description" : "To use type 'tab' into the omnibox",
+  "version": "0.1",
+  "background": {
+    "scripts": ["lodash.custom.js", "fuzzy-min.js", "background.js"]
+  },
+  "omnibox": { "keyword" : "tt" },
+  "manifest_version": 2,
+  "permissions": [
+    "tabs"
+  ]
+}
