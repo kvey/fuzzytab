@@ -91,11 +91,9 @@ fuzzy =
 
         return totalScore
 
-    filter: (space, query, opts) ->
+    filter: (space, query, extract, callback) ->
         space.reduce((prev, element, idx, space) ->
-            str = element
-            if opts.extract
-                str = opts.extract(element)
+            str = extract(element) if extract else element
             prev[prev.length] = {
                 score: fuzzy.match(str, query, opts)
                 original: element

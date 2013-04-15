@@ -22,8 +22,8 @@ function fuzzyTabs(search, callback){
   });
 }
 
-chrome.bookmarks.search("github", function(i){
-  console.log(i);
+chrome.bookmarks.getTree(function(i){
+  window.testing = i;
 });
 
 

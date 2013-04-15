@@ -3,8 +3,13 @@
   "description" : "To use type 'tab' into the omnibox",
   "version": "0.1",
   "background": {
-    "scripts": ["lodash.custom.js", "fuzzy-min.js", "background.js"]
+    "scripts": ["./libs/lodash.custom.js", "./libs/fuzzy-min.js", "background.js"]
   },
+  "content_scripts": [
+    {
+      "js": ["./libs/jquery.min.js", "./libs/jquery-ui.min.js", "content.js"]
+    }
+  ],
   "omnibox": { "keyword" : "tt" },
   "manifest_version": 2,
   "permissions": [
