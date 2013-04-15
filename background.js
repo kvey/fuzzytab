@@ -22,4 +22,9 @@ function fuzzyTabs(search, callback){
   });
 }
 
+chrome.bookmarks.search("github", function(i){
+  console.log(i);
+});
+
+
 //should add content script injected keyboard shortcut for all pages
